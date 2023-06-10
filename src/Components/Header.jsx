@@ -1,15 +1,28 @@
-import React,{ useState } from "react";
+import React,{ useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineCloseCircle } from 'react-icons/ai';
 import { SiYourtraveldottv } from 'react-icons/si';
 
 const Header = () => {
     const [header, setHeader] = useState(false);
+    const[scrolled, setScrolled] = useState(false);
 
     const handleHeader = () => {
         setHeader(!header)
     }
+
+    const handleScroll = () => {
+        const isScrolled = window.scrollY>0;
+        setScrolled(isScrolled);
+    };
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return() => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    },[]);
+
     return (
-        <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
+        <div className={`flex fixed  top-0 justify-between items-center h-24 w-[100%] mx-auto px-4 text-white transition-colors${scrolled ? ' bg-gray-900':'bg-transparent'}`}>
             <h1 className="w-1 text-3xl"><SiYourtraveldottv color="red"/></h1>
             <h1 className="w-full text-3xl font-bold text-yellow-500 ml-6">Voyage.</h1>
             <ul className="hidden md:flex">

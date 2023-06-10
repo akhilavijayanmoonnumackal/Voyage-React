@@ -247,8 +247,12 @@ img, video {
   top: 0;
 }
 
-.m-4 {
-  margin: 1rem;
+.right-0 {
+  right: 0;
+}
+
+.z-\[1000\] {
+  z-index: 1000;
 }
 
 .mx-auto {
@@ -261,66 +265,24 @@ img, video {
   margin-bottom: 1.5rem;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .ml-6 {
   margin-left: 1.5rem;
-}
-
-.mt-\[-96px\] {
-  margin-top: -96px;
 }
 
 .ml-7 {
   margin-left: 1.75rem;
 }
 
+.mt-\[-96px\] {
+  margin-top: -96px;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
 
-.mt-0 {
-  margin-top: 0;
-}
-
-.ml-8 {
-  margin-left: 2rem;
-}
-
-.ml-1 {
-  margin-left: .25rem;
-}
-
-.-ml-16 {
-  margin-left: -4rem;
-}
-
-.ml-16 {
-  margin-left: 4rem;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
-.mr-\[90\] {
-  margin-right: 90px;
-}
-
-.mr-\[90\%\] {
-  margin-right: 90%;
+.ml-52 {
+  margin-left: 13rem;
 }
 
 .block {
@@ -339,6 +301,10 @@ img, video {
   display: none;
 }
 
+.h-0 {
+  height: 0;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -349,42 +315,6 @@ img, video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-4 {
-  height: 1rem;
-}
-
-.h-7 {
-  height: 1.75rem;
-}
-
-.h-9 {
-  height: 2.25rem;
-}
-
-.h-1 {
-  height: .25rem;
-}
-
-.h-0 {
-  height: 0;
-}
-
-.h-2 {
-  height: .5rem;
-}
-
-.h-3 {
-  height: .75rem;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
-.h-6 {
-  height: 1.5rem;
 }
 
 .w-1 {
@@ -399,16 +329,12 @@ img, video {
   width: 60%;
 }
 
-.w-full {
+.w-full, .w-\[100\%\] {
   width: 100%;
 }
 
-.w-2 {
-  width: .5rem;
-}
-
-.w-auto {
-  width: auto;
+.max-w-\[1240px\%\] {
+  max-width: 1240px% ;
 }
 
 .max-w-\[1240px\] {
@@ -423,24 +349,12 @@ img, video {
   max-width: 100%;
 }
 
-.max-w-\[1240px\%\] {
-  max-width: 1240px% ;
-}
-
 .flex-col {
   flex-direction: column;
 }
 
-.items-end {
-  align-items: flex-end;
-}
-
 .items-center {
   align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -487,24 +401,13 @@ img, video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
-.bg-blue-50 {
+.bg-slate-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(239 246 255 / var(--tw-bg-opacity));
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+.bg-transparent {
+  background-color: #0000;
 }
 
 .p-2 {
@@ -525,44 +428,27 @@ img, video {
   padding-bottom: 4rem;
 }
 
-.py-3 {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-}
-
 .py-2 {
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.pt-1 {
-  padding-top: .25rem;
+.py-3 {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
 }
 
 .pt-2 {
   padding-top: .5rem;
 }
 
-.pt-3 {
-  padding-top: .75rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
-}
-
 .text-center {
   text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
@@ -573,16 +459,6 @@ img, video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -612,6 +488,11 @@ img, video {
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -622,14 +503,10 @@ img, video {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: .15s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
 .duration-500 {
@@ -676,10 +553,6 @@ body {
 }
 
 @media (width >= 1024px) {
-  .lg\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
   }
