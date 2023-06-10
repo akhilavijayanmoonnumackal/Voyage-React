@@ -1,19 +1,44 @@
 import React from "react";
-import { createRoot} from 'react-dom/client';
+import  ReactDOM  from "react-dom";
+import { createRoot } from 'react-dom/client';
 import '/src/index.css';
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const App = () => {
     return (
-        <div>
-            <Header/>
-            <Home/>
-            <Footer/>
-        </div>
-    )
-}
+        <>
+            <Header />
+            <Outlet />
+            <Footer />
+        </>
+    );
+};
 
-const root = createRoot(document.getElementById('root'));
-root.render(<App/>)
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <App />,
+        children: [
+            {
+                path: "/",
+                element: <Home />,
+            },
+            {
+                path: "/login",
+                element: <Login />,
+            },
+            {
+                path: "/signup",
+                element: <Signup />,
+            },
+        ],
+    },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<RouterProvider router={appRouter} />)
