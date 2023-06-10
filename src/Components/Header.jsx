@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineCloseCircle } from 'react-icons/ai';
 import { SiYourtraveldottv } from 'react-icons/si';
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const [header, setHeader] = useState(false);
@@ -26,13 +27,13 @@ const Header = () => {
             <h1 className="w-1 text-3xl"><SiYourtraveldottv color="red" /></h1>
             <h1 className="w-full text-3xl font-bold text-yellow-500 ml-6">Voyage.</h1>
             <ul className="hidden md:flex">
-                <li className="p-4">Home</li>
+            <Link to="/"><li className="p-4">Home</li></Link>
                 <li className="p-4">Places</li>
                 <li className="p-4">Resorts</li>
-                <li className="p-4">Profile</li>
+                <Link to="/profile"><li className="p-4">Profile</li></Link>
                 <li className="p-4">Contact</li>
                 <div className="text-white p-4 bg-yellow-600 rounded-lg">
-                    <button>Login</button>
+                    <Link to='/login'><button>Login</button></Link>
                 </div>
             </ul>
             <div onClick={handleHeader} className="block md:hidden">
@@ -44,12 +45,12 @@ const Header = () => {
                 <h1 className="w-1 text-3xl h-0 pt-2"><SiYourtraveldottv color="red" /></h1>
                 <h1 className="w-full text-3xl font-bold text-yellow-500 ml-7">Voyage.</h1>
                 <ul className="uppercase p-4">
-                    <li className="p-4 border-b border-gray-600">Home</li>
+                    <Link to="/"><li className="p-4 border-b border-gray-600">Home</li></Link>
                     <li className="p-4 border-b border-gray-600">Places</li>
                     <li className="p-4 border-b border-gray-600">Resorts</li>
-                    <li className="p-4 border-b border-gray-600">Profile</li>
+                    <Link to="/profile"><li className="p-4 border-b border-gray-600">Profile</li></Link>
                     <li className="p-4 border-b border-gray-600">Contact</li>
-                    <li className="p-4 border-b border-gray-600">Login</li>
+                    <Link to='/login'><li className="p-4 border-b border-gray-600">Login</li></Link>
 
                 </ul>
             </div>

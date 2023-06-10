@@ -7,6 +7,7 @@ import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
+import Profile from "./Components/Profile";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
         <>
             <Header />
             <Outlet />
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 };
@@ -35,6 +36,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/signup",
                 element: <Signup />,
+            },
+            {
+                path: "/profile",
+                element: <Profile />,
             },
         ],
     },
